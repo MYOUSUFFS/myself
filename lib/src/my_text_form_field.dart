@@ -1,4 +1,4 @@
-import 'package:my_widget/src/appsize.dart';
+import 'package:my_package/src/appsize.dart';
 import 'package:flutter/material.dart';
 
 class MyTextFormField extends StatelessWidget {

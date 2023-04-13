@@ -1,4 +1,4 @@
-library my_widget;
+library my_package;
 
 export 'src/my_text_form_field.dart';
 

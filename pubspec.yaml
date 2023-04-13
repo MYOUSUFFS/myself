@@ -1,7 +1,7 @@
-name: my_widget
+name: my_package
 description: My first package for testing in this package is Compulsion Expand.
 version: 0.0.1
-homepage: https://github.com/MYOUSUFFS/my_widget
+homepage: https://github.com/MYOUSUFFS/my_package
 
 environment:
   sdk: '>=2.19.6 <3.0.0'

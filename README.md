@@ -1,7 +1,7 @@
 # My Widget
 
-[![Pub Version](https://img.shields.io/pub/v/my_widget.svg)](https://pub.dev/packages/my_widget)
-[![GitHub License](https://img.shields.io/github/license/MYOUSUFFS/my_widget.svg)](https://github.com/MYOUSUFFS/my_widget/blob/master/LICENSE)
+[![Pub Version](https://img.shields.io/pub/v/my_package.svg)](https://pub.dev/packages/my_package)
+[![GitHub License](https://img.shields.io/github/license/MYOUSUFFS/my_package.svg)](https://github.com/MYOUSUFFS/my_package/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/<github-username>/<repo-name>.svg)](https://github.com/<github-username>/<repo-name>/issues)
 [![GitHub stars](https://img.shields.io/github/stars/<github-username>/<repo-name>.svg)](https://github.com/<github-username>/<repo-name>/stargazers)
 
@@ -15,16 +15,16 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  my_widget: 0.0.1
+  my_package: 0.0.1
 ```
 ## Import it
 ```
 Now in your Dart code, you can use:
-import 'package:my_widget/my_widget.dart';
+import 'package:my_package/my_package.dart';
 
 
 Use package
-TODO: This package is only my productivity increment, so this project name is my_widget.
+TODO: This package is only my productivity increment, so this project name is my_package.
 ```
 ## Features
 
@@ -37,12 +37,12 @@ start using the package.
 ```
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/update_soon` folder.
+TODO: If I am use the TextFormField i have use add my to MyTextFormField. Add longer examples
+to `/src` folder.
 
 ```
 dart
-const like = 'sample_soon';
+const like = 'my_text_form_field';
 ```
 
 ## Additional information
