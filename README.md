@@ -1,7 +1,7 @@
 # My Widget
 
-[![Pub Version](https://img.shields.io/pub/v/my_package.svg)](https://pub.dev/packages/my_package)
-[![GitHub License](https://img.shields.io/github/license/MYOUSUFFS/my_package.svg)](https://github.com/MYOUSUFFS/my_package/blob/master/LICENSE)
+[![Pub Version](https://img.shields.io/pub/v/myself.svg)](https://pub.dev/packages/myself)
+[![GitHub License](https://img.shields.io/github/license/MYOUSUFFS/myself.svg)](https://github.com/MYOUSUFFS/myself/blob/master/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/<github-username>/<repo-name>.svg)](https://github.com/<github-username>/<repo-name>/issues)
 [![GitHub stars](https://img.shields.io/github/stars/<github-username>/<repo-name>.svg)](https://github.com/<github-username>/<repo-name>/stargazers)
 
@@ -15,16 +15,16 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  my_package: 0.0.1
+  myself: 0.0.1
 ```
 ## Import it
 ```
 Now in your Dart code, you can use:
-import 'package:my_package/my_package.dart';
+import 'package:myself/myself.dart';
 
 
 Use package
-TODO: This package is only my productivity increment, so this project name is my_package.
+TODO: This package is only my productivity increment, so this project name is myself.
 ```
 ## Features
 
