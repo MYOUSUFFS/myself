@@ -1,3 +1,3 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+My first package for testing in this package is Compulsion Expand.

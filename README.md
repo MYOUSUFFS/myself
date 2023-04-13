@@ -1,22 +1,35 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# My Widget
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+[![Pub Version](https://img.shields.io/pub/v/my_widget.svg)](https://pub.dev/packages/my_widget)
+<!-- [![GitHub License](https://img.shields.io/github/license/MYOUSUFFS/my_widget.svg)](https://github.com/MYOUSUFFS/my_widget/blob/master/LICENSE) -->
+[![GitHub issues](https://img.shields.io/github/issues/<github-username>/<repo-name>.svg)](https://github.com/<github-username>/<repo-name>/issues)
+[![GitHub stars](https://img.shields.io/github/stars/<github-username>/<repo-name>.svg)](https://github.com/<github-username>/<repo-name>/stargazers)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## About
+
+My Widget is a my first package for testing in this package is Compulsion Expand.
+
+## Installation
+
+Add this to your package's `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  my_widget: 0.0.1
+  
+// Import package
+import 'package:my_widget/my_widget.dart';
+
+// Use package
+
+
+
+TODO: This package is only my productivity increment, so this project name is my_widget.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+This package use custom widget for code automation for productivity
 
 ## Getting started
 
@@ -34,6 +47,4 @@ const like = 'sample';
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+##### This is my first package but not enough in this package this package will update as soon as possible
