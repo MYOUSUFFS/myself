@@ -1,10 +1,9 @@
 # My Widget
 
 [![Pub Version](https://img.shields.io/pub/v/myself.svg)](https://pub.dev/packages/myself)
-[![GitHub License](https://img.shields.io/github/license/MYOUSUFFS/myself.svg)](https://github.com/MYOUSUFFS/myself/blob/master/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/<github-username>/<repo-name>.svg)](https://github.com/<github-username>/<repo-name>/issues)
-[![GitHub stars](https://img.shields.io/github/stars/<github-username>/<repo-name>.svg)](https://github.com/<github-username>/<repo-name>/stargazers)
-
+[![GitHub License](https://img.shields.io/github/license/MYOUSUFFS/my_widget.svg)](https://github.com/MYOUSUFFS/my_widget/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/MYOUSUFFS/my_widget.svg)](https://github.com/<github-username>/<repo-name>/issues)
+[![GitHub stars](https://img.shields.io/github/stars/MYOUSUFFS/my_widget.svg)](https://github.com/<github-username>/<repo-name>/stargazers)
 
 ## About
 
@@ -15,7 +14,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  myself: 0.0.1
+  myself: 0.0.2
 ```
 ## Import it
 ```
