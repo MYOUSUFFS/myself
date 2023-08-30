@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-printNewFormat(String text, int r, int g, int b) {
+printRGB(String text, int r, int g, int b) {
   int codeColor = 16 + (36 * (r ~/ 51)) + (6 * (g ~/ 51)) + (b ~/ 51);
   if (kDebugMode) {
     print(codeColor);
@@ -9,16 +9,7 @@ printNewFormat(String text, int r, int g, int b) {
   return debugPrint("\x1B[38;5;${codeColor}m$text\x1B[0m");
 }
 
-printHexCodeNew(String text, String hexCode) {
-  Map<String, int> rgbValues = hexToRgb(hexCode);
-  int codeColor = 16 +
-      (36 * (rgbValues['r']! ~/ 51)) +
-      (6 * (rgbValues['g']! ~/ 51)) +
-      (rgbValues['b']! ~/ 51);
-  return debugPrint("\x1B[38;5;${codeColor}m$text\x1B[0m");
-}
-
-Map<String, int> hexToRgb(String hexColorCode) {
+Map<String, int> _hex(String hexColorCode) {
   String hex = hexColorCode.replaceAll("#", "");
   if (hex.length != 6) {
     throw const FormatException("Invalid hexadecimal color code");
@@ -29,4 +20,13 @@ Map<String, int> hexToRgb(String hexColorCode) {
   int b = int.parse(hex.substring(4, 6), radix: 16);
 
   return {'r': r, 'g': g, 'b': b};
+}
+
+printHex(String text, String hexCode) {
+  Map<String, int> rgbValues = _hex(hexCode);
+  int codeColor = 16 +
+      (36 * (rgbValues['r']! ~/ 51)) +
+      (6 * (rgbValues['g']! ~/ 51)) +
+      (rgbValues['b']! ~/ 51);
+  return debugPrint("\x1B[38;5;${codeColor}m$text\x1B[0m");
 }
