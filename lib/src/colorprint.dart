@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 
 class MySelfColor {
   printRGB(String text, int r, int g, int b) {
@@ -8,6 +9,10 @@ class MySelfColor {
     }
 
     return debugPrint("\x1B[38;5;${codeColor}m$text\x1B[0m");
+  }
+
+  void color(MaterialColor color,String text) {
+    printHex('#${color.value.toRadixString(16).substring(2).toUpperCase()}',text);
   }
 
   printHex(String text, String hexCode) {
