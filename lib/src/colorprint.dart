@@ -1,8 +1,5 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
-
 class MySelfColor {
-  printRGB(String text, int r, int g, int b) {
+  void printRGB(int r, int g, int b, String text) {
     int codeColor = 16 + (36 * (r ~/ 51)) + (6 * (g ~/ 51)) + (b ~/ 51);
     if (kDebugMode) {
       print(codeColor);
@@ -11,11 +8,21 @@ class MySelfColor {
     return debugPrint("\x1B[38;5;${codeColor}m$text\x1B[0m");
   }
 
-  void color(MaterialColor color,String text) {
-    printHex('#${color.value.toRadixString(16).substring(2).toUpperCase()}',text);
+  void color(MaterialColor color, String text) {
+    printHex(
+        '#${color.value.toRadixString(16).substring(2).toUpperCase()}', text);
   }
 
-  printHex(String text, String hexCode) {
+  void printError(String text){
+    debugPrint('\x1B[31m$text\x1B[0m')
+  };
+
+  void printWarning(String text){
+    debugPrint('\x1B[33m$text\x1B[0m')
+  };
+
+
+  void printHex(String hexCode, String text) {
     Map<String, int> rgbValues = _hex(hexCode);
     int codeColor = 16 +
         (36 * (rgbValues['r']! ~/ 51)) +
@@ -23,7 +30,7 @@ class MySelfColor {
         (rgbValues['b']! ~/ 51);
     return debugPrint("\x1B[38;5;${codeColor}m$text\x1B[0m");
   }
-  
+
   Map<String, int> _hex(String hexColorCode) {
     String hex = hexColorCode.replaceAll("#", "");
     if (hex.length != 6) {
