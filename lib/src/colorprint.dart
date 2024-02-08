@@ -16,14 +16,17 @@ class MySelfColor {
         '#${color.value.toRadixString(16).substring(2).toUpperCase()}', text);
   }
 
-  void printError(String text){
-    debugPrint('\x1B[31m$text\x1B[0m')
-  };
+  void printSuccess({String? text}) {
+    debugPrint('\x1B[38;5;28m${text ?? "🟢Success"}\x1B[0m');
+  }
 
-  void printWarning(String text){
-    debugPrint('\x1B[33m$text\x1B[0m')
-  };
+  void printError({String? text}) {
+    debugPrint('\x1B[31m${text ?? "🔴Error"}\x1B[0m');
+  }
 
+  void printWarning({String? text}) {
+    debugPrint('\x1B[33m${text ?? "🟡Warning"}\x1B[0m');
+  }
 
   void printHex(String hexCode, String text) {
     Map<String, int> rgbValues = _hex(hexCode);
