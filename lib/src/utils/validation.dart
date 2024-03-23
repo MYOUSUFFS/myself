@@ -83,7 +83,7 @@ class MyValidation {
     if (value?.isEmpty ?? true) {
       return 'Password is required';
     } else if (!regex.hasMatch('$value')) {
-      return 'Password should contain at least, \none upper case (A-Z). \none lower case (a-z). \none digit (0-9). \none Special character (*&^%\$#@!~). \n and must be at least 8 characters in length.';
+      return 'Password should contain at least, \none upper case (A-Z). \none lower case (a-z). \none digit (0-9). \none Special character (*&^%\$#@!~). \nand must be at least 8 characters in length.';
     }
 
     return null;

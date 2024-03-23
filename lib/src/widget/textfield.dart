@@ -8,46 +8,46 @@ InputDecoration elevatedInputDecoration(
   Color? fillColor,
 }) {
   return InputDecoration(
-    enabledBorder: const OutlineInputBorder(
-      borderSide: BorderSide(color: Colors.white),
-      borderRadius: BorderRadius.all(Radius.circular(20)),
-    ),
-    border: const OutlineInputBorder(
-      borderRadius: BorderRadius.all(
-        Radius.circular(20),
+    enabledBorder: OutlineInputBorder(
+      borderSide: const BorderSide(
       ),
+      borderRadius: BorderRadius.circular(20),
+    ),
+    border: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(20),
     ),
     filled: filled,
-    fillColor: filled ? (fillColor ?? Colors.white) : null,
     hintText: hintText,
     prefixIcon: prefixIcon,
     suffixIcon: suffixIcon,
   );
 }
 
-InputDecoration roundedInputDecoration(
-    {String? hintText, Widget? prefixIcon, Widget? suffixIcon}) {
+InputDecoration roundedInputDecoration({
+  String? hintText,
+  Widget? prefixIcon,
+  Widget? suffixIcon,
+}) {
   return InputDecoration(
     filled: true,
-    fillColor: Colors.white,
     hintText: hintText,
     prefixIcon: prefixIcon,
     suffixIcon: suffixIcon,
-    hintStyle: TextStyle(color: Colors.grey.shade400, fontSize: 16),
     contentPadding: const EdgeInsets.symmetric(horizontal: 16),
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(30),
-      borderSide: const BorderSide(color: Colors.grey, width: 0.0),
+      borderSide: const BorderSide( width: 0.0),
     ),
     border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
   );
 }
 
-InputDecoration squaredInputDecoration(
-    {String? hintText,
-    Widget? prefixIcon,
-    Widget? suffixIcon,
-    double? borderRadius}) {
+InputDecoration squaredInputDecoration({
+  String? hintText,
+  Widget? prefixIcon,
+  Widget? suffixIcon,
+  double? borderRadius,
+}) {
   return InputDecoration(
     suffixIcon: suffixIcon,
     prefixIcon: prefixIcon,
@@ -59,31 +59,33 @@ InputDecoration squaredInputDecoration(
   );
 }
 
-InputDecoration squaredInputDecorationWhite(
-    {String? hintText,
-    Widget? prefixIcon,
-    Widget? suffixIcon,
-    double? borderRadius}) {
+InputDecoration squaredInputDecorationWhite({
+  String? hintText,
+  Widget? prefixIcon,
+  Widget? suffixIcon,
+  double? borderRadius,
+}) {
   return InputDecoration(
     suffixIcon: suffixIcon,
     hintText: hintText,
     filled: true,
-    fillColor: Colors.white,
     border: OutlineInputBorder(
       borderRadius: BorderRadius.circular(borderRadius ?? 10.0),
     ),
   );
 }
 
-InputDecoration squaredInputDecorationBorderColor(
-    {String? hintText, Widget? prefixIcon, Widget? suffixIcon, Color? color}) {
+InputDecoration squaredInputDecorationBorderColor({
+  String? hintText,
+  Widget? prefixIcon,
+  Widget? suffixIcon,
+  Color? color,
+}) {
   return InputDecoration(
     filled: true,
-    fillColor: Colors.white,
     hintText: hintText,
     prefixIcon: prefixIcon,
     suffixIcon: suffixIcon,
-    hintStyle: TextStyle(color: Colors.grey.shade400, fontSize: 16),
     contentPadding: const EdgeInsets.symmetric(horizontal: 16),
     disabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(30),
@@ -97,42 +99,30 @@ InputDecoration squaredInputDecorationBorderColor(
 }
 
 InputDecoration labelInputDecoration(String label) => InputDecoration(
-      enabledBorder: const OutlineInputBorder(
-        borderSide: BorderSide(
-          color: Colors.white,
+      enabledBorder: OutlineInputBorder(
+        borderSide: const BorderSide(
         ),
-        borderRadius: BorderRadius.all(
-          Radius.circular(10),
-        ),
+        borderRadius: BorderRadius.circular(10),
       ),
-      border: const OutlineInputBorder(
-        borderRadius: BorderRadius.all(
-          Radius.circular(10),
-        ),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(10),
       ),
       filled: true,
-      fillColor: Colors.white,
       labelText: label,
     );
 
 InputDecoration labelInputDecorationSuffix(
         BuildContext context, String label) =>
     InputDecoration(
-      enabledBorder: const OutlineInputBorder(
-        borderSide: BorderSide(
-          color: Colors.white,
+      enabledBorder: OutlineInputBorder(
+        borderSide: const BorderSide(
         ),
-        borderRadius: BorderRadius.all(
-          Radius.circular(10),
-        ),
+        borderRadius: BorderRadius.circular(10),
       ),
-      border: const OutlineInputBorder(
-        borderRadius: BorderRadius.all(
-          Radius.circular(10),
-        ),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(10),
       ),
       filled: true,
-      fillColor: Colors.white,
       labelText: label,
       suffix: GestureDetector(
         onTap: () {
@@ -140,7 +130,10 @@ InputDecoration labelInputDecorationSuffix(
         },
         child: Text(
           'Change',
-          style: TextStyle(fontSize: 12, color: Theme.of(context).primaryColor),
+          style: TextStyle(
+            fontSize: 12,
+            color: Theme.of(context).primaryColor,
+          ),
         ),
       ),
     );

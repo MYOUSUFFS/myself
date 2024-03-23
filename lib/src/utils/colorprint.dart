@@ -4,15 +4,27 @@ class MySelfColor {
   // Todo : || ------- Default Colors ----------
 
   void printSuccess({String? text}) {
-    debugPrint('\x1B[38;5;28m${text ?? "Success"}🟢\x1B[0m');
+    if (text?.isNotEmpty ?? false) {
+      debugPrint('\x1B[38;5;28m$text🟢\x1B[0m');
+    } else {
+      debugPrint('\x1B[38;5;28mSuccess🟢\x1B[0m');
+    }
   }
 
   void printError({String? text}) {
-    debugPrint('\x1B[31m${text ?? "Error"}🔴\x1B[0m');
+    if (text?.isNotEmpty ?? false) {
+      debugPrint('\x1B[31m$text🔴\x1B[0m');
+    } else {
+      debugPrint('\x1B[31mError🔴\x1B[0m');
+    }
   }
 
   void printWarning({String? text}) {
-    debugPrint('\x1B[33m${text ?? "Warning"}🟡\x1B[0m');
+    if (text?.isNotEmpty ?? false) {
+      debugPrint('\x1B[33m$text🟡\x1B[0m');
+    } else {
+      debugPrint('\x1B[33mWarning🟡\x1B[0m');
+    }
   }
 
   //! || ------- End of Default Colors ----------
