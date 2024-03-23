@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart';
 
 class MySelfColor {
   // Todo : || ------- Default Colors ----------
@@ -9,11 +8,11 @@ class MySelfColor {
   }
 
   void printError({String? text}) {
-    debugPrint('\x1B[31m${text ?? "🔴Error"}\x1B[0m');
+    debugPrint('\x1B[31m${text ?? "Error"}🔴\x1B[0m');
   }
 
   void printWarning({String? text}) {
-    debugPrint('\x1B[33m${text ?? "🟡Warning"}\x1B[0m');
+    debugPrint('\x1B[33m${text ?? "Warning"}🟡\x1B[0m');
   }
 
   //! || ------- End of Default Colors ----------
@@ -22,9 +21,6 @@ class MySelfColor {
 
   void printRGB(int r, int g, int b, String text) {
     int codeColor = 16 + (36 * (r ~/ 51)) + (6 * (g ~/ 51)) + (b ~/ 51);
-    if (kDebugMode) {
-      print(codeColor);
-    }
 
     return debugPrint("\x1B[38;5;${codeColor}m$text\x1B[0m");
   }
@@ -33,7 +29,7 @@ class MySelfColor {
 
   // Todo : || ------- Material Color Print -----------
 
-  void color(MaterialColor color, String text) {
+  void colorPrint(Color color, String text) {
     printHex(color.toHex(), text);
   }
 
@@ -69,7 +65,7 @@ class MySelfColor {
   //! || ------- End of HEX Color Print ----------
 }
 
-extension MyColor on MaterialColor {
+extension MyColor on Color {
   String toHex() {
     return '#${value.toRadixString(16).substring(2).toUpperCase()}';
   }
