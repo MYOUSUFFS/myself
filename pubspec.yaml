@@ -1,6 +1,6 @@
 name: myself
 description: This package was created to facilitate my own work. It will make your job easier if you sync with me.
-version: 0.0.3
+version: 0.0.5
 homepage: https://github.com/MYOUSUFFS/myself
 
 environment:
