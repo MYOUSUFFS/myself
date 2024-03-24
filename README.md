@@ -1,4 +1,4 @@
-# My Widget
+# MySelf Package
 
 [![Pub Version](https://img.shields.io/pub/v/myself.svg)](https://pub.dev/packages/myself)
 [![GitHub License](https://img.shields.io/github/license/MYOUSUFFS/my_widget.svg)](https://github.com/MYOUSUFFS/my_widget/blob/master/LICENSE)
@@ -7,43 +7,58 @@
 
 ## About
 
-My Widget is a my first package for testing in this package is Compulsion Expand.
+MySelf is a Flutter package that provides functionality for printing colored text in the console. It offers methods to print text in predefined colors, custom RGB colors, material colors, and hexadecimal colors.
+
+They provide Animation, Form validation, and Beautiful Pre-defined Input Decorations.
+
+## Features
+
+- Print text in predefined colors for success, error, and warning messages.
+- Print text in custom RGB colors.
+- Print text in material colors by providing a `Color` object.
+- Print text in colors specified by hexadecimal color codes.
+- Convert hexadecimal color codes to RGB values for color printing.
+
 ## Installation
 
-Add this to your package's `pubspec.yaml` file:
+To use MySelf in your Flutter project, add it as a dependency in your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  myself: 0.0.2
-```
-## Import it
-```
-Now in your Dart code, you can use:
-import 'package:myself/myself.dart';
-
-
-Use package
-TODO: This package is only my productivity increment, so this project name is myself.
-```
-## Features
-
-This package use custom widget for code automation for productivity
-## Getting started
+  myself: ^0.0.5
 ```
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-```
 ## Usage
-
-TODO: If I am use the TextFormField i have use add my to MyTextFormField. Add longer examples
-to `/src` folder.
-
-```
-dart
-const like = 'my_text_form_field';
+Import the package in your Dart file:
+```dart
+import 'package:myself/myself.dart';
 ```
 
-## Additional information
+Instantiate the `MySelfColor` class to utilize its color printing methods:
+```dart
+MySelfColor mySelfColor = MySelfColor();
+```
 
-This is my first package but not enough in this package this package will update as soon as possible
+## Print in Default Colors
+```dart
+mySelfColor.printSuccess(text: "Operation successful");
+mySelfColor.printError(text: "Error occurred");
+mySelfColor.printWarning(text: "Proceed with caution");
+```
+## Print in RGB Color
+```dart
+mySelfColor.printRGB(255, 0, 0, "Custom red color");
+```
+## Print in Material Color
+```dart
+mySelfColor.colorPrint(Colors.blue, "Blue text");
+```
+## Print in Hexadecimal Color
+```dart
+mySelfColor.printHex("#FFA500", "Orange text");
+```
+## Contributing
+Contributions to MySelf are welcome! If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request on [GitHub](https://github.com/MYOUSUFFS/myself).
+
+License
+This package is licensed under the MIT [License](https://github.com/MYOUSUFFS/myself/blob/master/LICENSE). See the LICENSE file for details.
