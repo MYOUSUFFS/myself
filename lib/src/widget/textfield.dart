@@ -9,8 +9,7 @@ InputDecoration elevatedInputDecoration(
 }) {
   return InputDecoration(
     enabledBorder: OutlineInputBorder(
-      borderSide: const BorderSide(
-      ),
+      borderSide: const BorderSide(),
       borderRadius: BorderRadius.circular(20),
     ),
     border: OutlineInputBorder(
@@ -36,7 +35,7 @@ InputDecoration roundedInputDecoration({
     contentPadding: const EdgeInsets.symmetric(horizontal: 16),
     enabledBorder: OutlineInputBorder(
       borderRadius: BorderRadius.circular(30),
-      borderSide: const BorderSide( width: 0.0),
+      borderSide: const BorderSide(width: 0.0),
     ),
     border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
   );
@@ -100,8 +99,7 @@ InputDecoration squaredInputDecorationBorderColor({
 
 InputDecoration labelInputDecoration(String label) => InputDecoration(
       enabledBorder: OutlineInputBorder(
-        borderSide: const BorderSide(
-        ),
+        borderSide: const BorderSide(),
         borderRadius: BorderRadius.circular(10),
       ),
       border: OutlineInputBorder(
@@ -111,12 +109,11 @@ InputDecoration labelInputDecoration(String label) => InputDecoration(
       labelText: label,
     );
 
-InputDecoration labelInputDecorationSuffix(
-        BuildContext context, String label) =>
+InputDecoration labelInputDecorationSuffix(BuildContext context, String label,
+        {Function()? onTap, Widget? suffixChild}) =>
     InputDecoration(
       enabledBorder: OutlineInputBorder(
-        borderSide: const BorderSide(
-        ),
+        borderSide: const BorderSide(),
         borderRadius: BorderRadius.circular(10),
       ),
       border: OutlineInputBorder(
@@ -125,15 +122,14 @@ InputDecoration labelInputDecorationSuffix(
       filled: true,
       labelText: label,
       suffix: GestureDetector(
-        onTap: () {
-          Navigator.pop(context);
-        },
-        child: Text(
-          'Change',
-          style: TextStyle(
-            fontSize: 12,
-            color: Theme.of(context).primaryColor,
-          ),
-        ),
+        onTap: onTap,
+        child: suffixChild ??
+            Text(
+              'Change',
+              style: TextStyle(
+                fontSize: 12,
+                color: Theme.of(context).primaryColor,
+              ),
+            ),
       ),
     );
