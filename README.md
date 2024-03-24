@@ -33,7 +33,7 @@ Import the package in your Dart file:
 ```dart
 import 'package:myself/myself.dart';
 ```
-
+## MySelfColor
 Instantiate the `MySelfColor` class to utilize its color printing methods:
 ```dart
 MySelfColor mySelfColor = MySelfColor();
@@ -57,8 +57,9 @@ mySelfColor.colorPrint(Colors.blue, "Blue text");
 ```dart
 mySelfColor.printHex("#FFA500", "Orange text");
 ```
+**This is only for the MySelfColor Class example. Please check other class in the** [Others.]()
 ## Contributing
 Contributions to MySelf are welcome! If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request on [GitHub](https://github.com/MYOUSUFFS/myself).
 
-License
+## License
 This package is licensed under the MIT [License](https://github.com/MYOUSUFFS/myself/blob/master/LICENSE). See the LICENSE file for details.
