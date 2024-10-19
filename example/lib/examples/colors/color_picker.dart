@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flex_color_picker/flex_color_picker.dart';
 
-Future<Color> OpenColorPicker(BuildContext context) async {
+Future<Color> openColorPicker(BuildContext context) async {
   Color currentColor = Colors.blue;
   bool enableOpacity = true;
 
   bool enableShadesSelection = true;
-  void _changeColor(Color color) {
+  void changeColor(Color color) {
     currentColor = color;
   }
 
@@ -14,13 +14,13 @@ Future<Color> OpenColorPicker(BuildContext context) async {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        title: Text('Pick a color'),
+        title: const Text('Pick a color'),
         content: SingleChildScrollView(
           child: Column(
             children: [
               ColorPicker(
-                onColorChanged: _changeColor,
-                pickersEnabled: {
+                onColorChanged: changeColor,
+                pickersEnabled: const {
                   ColorPickerType.both: true,
                 },
                 enableShadesSelection: enableShadesSelection,
@@ -46,14 +46,14 @@ Future<Color> OpenColorPicker(BuildContext context) async {
                 ),
               ),
               CheckboxListTile(
-                title: Text('Enable Shades Selection'),
+                title: const Text('Enable Shades Selection'),
                 value: enableShadesSelection,
                 onChanged: (value) {
                   enableShadesSelection = value!;
                 },
               ),
               CheckboxListTile(
-                title: Text('Enable Opacity Selection'),
+                title: const Text('Enable Opacity Selection'),
                 value: enableOpacity,
                 onChanged: (value) {
                   enableOpacity = value!;
@@ -67,7 +67,7 @@ Future<Color> OpenColorPicker(BuildContext context) async {
             onPressed: () {
               Navigator.of(context).pop();
             },
-            child: Text('Close'),
+            child: const Text('Close'),
           ),
         ],
       );

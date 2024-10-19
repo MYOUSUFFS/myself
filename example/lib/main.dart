@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myself/myself.dart';
 import 'package:provider/provider.dart';
 
 import 'data.dart';
@@ -8,9 +9,7 @@ import 'style/text.dart';
 void main() {
   runApp(
     MultiProvider(
-      providers: [
-        ChangeNotifierProvider<DataIs>(create: (_) => DataIs()),
-      ],
+      providers: [ChangeNotifierProvider<DataIs>(create: (_) => DataIs())],
       child: const MyApp(),
     ),
   );
@@ -27,31 +26,38 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     final dataIs = Provider.of<DataIs>(context);
-    return MaterialApp(
-      title: 'MySelf Package Demo',
-      debugShowCheckedModeBanner: false,
-      theme: dataIs.themeDataIs,
-      themeMode: ThemeMode.dark,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("MySelf Package Demo"),
-          actions: [
-            Switch(
-              value: dataIs.themeIsDark,
-              onChanged: (value) {
-                dataIs.changeTheme(value);
-              },
+    return Center(
+      child: Container(
+        constraints: const BoxConstraints(maxWidth: MyAppSize.tab),
+        child: MaterialApp(
+          title: 'MySelf Package Demo',
+          debugShowCheckedModeBanner: false,
+          theme: dataIs.themeDataIs,
+          themeMode: ThemeMode.dark,
+          home: Scaffold(
+            appBar: AppBar(
+              title: const Text("MySelf Package Demo"),
+              actions: [
+                Switch(
+                  value: dataIs.themeIsDark,
+                  onChanged: (value) {
+                    dataIs.changeTheme(value);
+                  },
+                ),
+                Text("Theme\nMode",
+                    style: MyText.heading.copyWith(fontSize: 14)),
+                const SizedBox(width: 10)
+              ],
             ),
-            Text("Theme\nMode", style: MyText.heading.copyWith(fontSize: 14)),
-            const SizedBox(width: 10)
-          ],
-        ),
-        body: ListView.separated(
-          physics: const BouncingScrollPhysics(),
-          itemBuilder: (BuildContext context, int index) =>
-              examples(context)[index],
-          separatorBuilder: (BuildContext context, int index) => const Divider(),
-          itemCount: examples(context).length,
+            body: ListView.separated(
+              physics: const BouncingScrollPhysics(),
+              itemBuilder: (BuildContext context, int index) =>
+                  examples(context)[index],
+              separatorBuilder: (BuildContext context, int index) =>
+                  const Divider(),
+              itemCount: examples(context).length,
+            ),
+          ),
         ),
       ),
     );

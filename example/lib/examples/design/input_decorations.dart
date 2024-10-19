@@ -10,19 +10,19 @@ class MyInputDecorations extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _dataIs = Provider.of<DataIs>(context);
+    final dataIs = Provider.of<DataIs>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Input Decoration Demo'),
+        title: const Text('Input Decoration Demo'),
         actions: [
           Switch(
-            value: _dataIs.themeIsDark,
+            value: dataIs.themeIsDark,
             onChanged: (value) {
-              _dataIs.changeTheme(value);
+              dataIs.changeTheme(value);
             },
           ),
           Text("Theme\nMode", style: MyText.heading.copyWith(fontSize: 14)),
-          SizedBox(width: 10)
+          const SizedBox(width: 10)
         ],
       ),
       body: Padding(
@@ -40,7 +40,7 @@ class MyInputDecorations extends StatelessWidget {
                     : Colors.grey[800],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             TextField(
               decoration: roundedInputDecoration(
                 hintText: 'Rounded Input',
@@ -48,7 +48,7 @@ class MyInputDecorations extends StatelessWidget {
                 // suffixIcon: Icon(Icons.clear),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             TextField(
               decoration: squaredInputDecoration(
                 hintText: 'Squared Input',
@@ -57,7 +57,7 @@ class MyInputDecorations extends StatelessWidget {
                 // borderRadius: 10,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             TextField(
               decoration: squaredInputDecorationWhite(
                 hintText: 'Squared Input (White)',
@@ -66,7 +66,7 @@ class MyInputDecorations extends StatelessWidget {
                 // borderRadius: 10,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             TextField(
               decoration: squaredInputDecorationBorderColor(
                 hintText: 'Squared Input (Border Color)',
@@ -77,11 +77,11 @@ class MyInputDecorations extends StatelessWidget {
                 //     : Colors.green,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             TextField(
               decoration: labelInputDecoration('Label Input'),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             TextField(
               decoration: labelInputDecorationSuffix(
                 context,

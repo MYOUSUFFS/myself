@@ -10,7 +10,7 @@ class PrintColorFunctions extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Color Printing Demo"),
+        title: const Text("Color Printing Demo"),
       ),
       body: SafeArea(
         child: Padding(
@@ -22,38 +22,38 @@ class PrintColorFunctions extends StatelessWidget {
                   onPressed: () {
                     MySelfColor().printSuccess();
                   },
-                  child: Text("🟢 Success Print")),
+                  child: const Text("🟢 Success Print")),
               ElevatedButton(
                   onPressed: () {
                     MySelfColor().printWarning();
                   },
-                  child: Text("🟡 Warning Print")),
+                  child: const Text("🟡 Warning Print")),
               ElevatedButton(
                   onPressed: () {
                     MySelfColor().printError();
                   },
-                  child: Text("🔴 Error Print")),
+                  child: const Text("🔴 Error Print")),
               //! ------------- End Default Print ------------------
 
               Padding(
-                padding: EdgeInsets.only(top: 20),
+                padding: const EdgeInsets.only(top: 20),
                 child: Text("Custom Color print", style: MyText.heading),
               ),
               ElevatedButton(
                   onPressed: () {
                     MySelfColor().colorPrint(Colors.blueAccent, "Custom Color");
                   },
-                  child: Text("Flutter Colors Print")),
+                  child: const Text("Flutter Colors Print")),
               ElevatedButton(
                   onPressed: () {
                     MySelfColor().printHex('#18FFFF', "Custom Color");
                   },
-                  child: Text("HEX code Colors Print")),
+                  child: const Text("HEX code Colors Print")),
               ElevatedButton(
                   onPressed: () {
                     MySelfColor().printRGB(0, 0, 255, "Custom Color");
                   },
-                  child: Text("RGB Colors Print")),
+                  child: const Text("RGB Colors Print")),
               //! ------------- End Custom Color print ------------------
 
               Padding(
@@ -64,10 +64,10 @@ class PrintColorFunctions extends StatelessWidget {
                   onPressed: () {
                     MySelfColor().colorPrint(
                       Colors.blueAccent,
-                      Colors.cyanAccent.toHex(),
+                      Colors.cyanAccent.toHexCode(),
                     );
                   },
-                  child: Text("Color to hex code")),
+                  child: const Text("Color to hex code")),
               //! ------------- End Find HEX Code ------------------
             ],
           ),

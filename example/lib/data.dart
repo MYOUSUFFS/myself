@@ -14,7 +14,6 @@ class DataIs extends ChangeNotifier {
     } else {
       _themeDataIs = ThemeData.light();
     }
-    ;
     notifyListeners();
   }
 }

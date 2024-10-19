@@ -7,27 +7,27 @@ import '../examples/validation/validation.dart';
 
 List<Widget> examples(BuildContext context) => [
       ListTile(
-        leading: Icon(Icons.stars),
-        title: Text('Color Print Examples'),
+        leading: const Icon(Icons.stars),
+        title: const Text('Color Print Examples'),
         onTap: () => Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => PrintColorFunctions())),
+            MaterialPageRoute(builder: (context) => const PrintColorFunctions())),
       ),
-      ListTile(
+      const ListTile(
         leading: Icon(Icons.stars),
         title: Text('Animation Examples'),
         // onTap: () => Navigator.of(context).push(
         //     MaterialPageRoute(builder: (context) => PrintColorFunctions())),
       ),
       ListTile(
-        leading: Icon(Icons.stars),
-        title: Text('InputDecoration Examples'),
+        leading: const Icon(Icons.stars),
+        title: const Text('InputDecoration Examples'),
         onTap: () => Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => MyInputDecorations())),
+            MaterialPageRoute(builder: (context) => const MyInputDecorations())),
       ),
       ListTile(
-        leading: Icon(Icons.stars),
-        title: Text('Validation Examples'),
+        leading: const Icon(Icons.stars),
+        title: const Text('Validation Examples'),
         onTap: () => Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => ValidationPage())),
+            .push(MaterialPageRoute(builder: (context) => const ValidationPage())),
       ),
     ];
